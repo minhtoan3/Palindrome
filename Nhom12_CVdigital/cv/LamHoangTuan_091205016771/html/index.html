@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+  <meta charset="UTF-8" />
+  <title>Responsive Portfolio Website</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <a href="#home" class="logo">lhtuwsn</a>
+
+        <nav>
+            <a href="#home" class="active"> Home</a>
+            <a href="#skills" >Kỹ năng</a>
+            <a href="#education" >Học vấn</a>
+            <a href="#experience" >Kinh Nghiệm</a>
+        </nav>
+        
+    </header>
+    <section class="home" id="home">
+        <div class="home-img">
+            <img src="../img/avatar.jpg" alt="">
+        </div>
+        
+        <div class="home-content">
+            <h1> Chào, Tôi là <span>Lâm Hoàng Tuấn</span></h1>
+            <p>
+            Tôi đang là sinh viên năm 2 ngành Công nghệ Thông tin, mong muốn tích lũy kinh nghiệm thực tế qua các dự án nhỏ và kỳ thực tập. Mục tiêu ngắn hạn là thành thạo các công nghệ Web (HTML, CSS, JavaScript), về lâu dài tôi muốn trở thành lập trình viên Front-end có nền tảng vững chắc và khả năng làm việc nhóm tốt.
+            <div class="socials">
+                <a href="https://github.com/lhtuwsn"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.facebook.com/share/1ZkR4yUAtd/?mibextid=wwXIfr"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/lh._.tuwsn?igsh=MWlsOWp1eHBmMGVkaw%3D%3D&utm_source=qr"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            </p>
+        </div>
+    </section>
+   <section class="education" id="education">
+  <h2 class="section-title" data-aos="fade-up">Học vấn</h2>
+  <div class="edu-card">
+    <div class="edu-item" data-aos="fade-right" data-aos-delay="100">
+        <i class="fas fa-graduation-cap edu-icon"></i>
+        <p><strong>Ngành:</strong> Công nghệ thông tin</p>
+    </div>
+    <div class="edu-item" data-aos="fade-right" data-aos-delay="200">
+        <i class="fas fa-university edu-icon"></i>
+        <p><strong>Trường đại học:</strong> Giao Thông Vận Tải (2023–2027)</p>
+    </div>
+    <div class="edu-item" data-aos="fade-right" data-aos-delay="300">
+        <i class="fas fa-clock edu-icon"></i>
+        <p><strong>Tốt nghiệp:</strong> Chưa</p>
+    </div>
+    <div class="edu-qualifications">
+        <ul>
+            <li data-aos="fade-up" data-aos-delay="400"><i class="fas fa-code edu-icon-small"></i>Kiến thức cơ bản về HTML, CSS, JavaScript</li>
+            <li data-aos="fade-up" data-aos-delay="500"><i class="fab fa-github edu-icon-small"></i>Làm quen với Git và GitHub để quản lý mã nguồn</li>
+            <li data-aos="fade-up" data-aos-delay="600"><i class="fas fa-globe edu-icon-small"></i>Đã từng làm website cá nhân hoặc dự án nhóm đơn giản</li>
+        </ul>
+    </div>
+  </div>
+</section>
+
+<section class="skills" id="skills" data-aos="fade-up">
+  <h2 class="section-title">Kỹ năng</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-aos="zoom-in">
+      <i class="fa-brands fa-html5 skill-icon"></i>
+      <h3>HTML & CSS</h3>
+      <div class="skill-bar">
+        <div class="skill-progress" data-percent="40%"></div>
+      </div>
+      <div class="skill-percent">40%</div>
+    </div>
+
+    <div class="skill-card" data-aos="zoom-in" data-aos-delay="100">
+      <i class="fa-brands fa-java skill-icon"></i>
+      <h3>Java</h3>
+      <div class="skill-bar">
+        <div class="skill-progress" data-percent="40%"></div>
+      </div>
+      <div class="skill-percent">40%</div>
+    </div>
+
+    <div class="skill-card" data-aos="zoom-in" data-aos-delay="200">
+      <i class="fa-solid fa-code skill-icon"></i>
+      <h3>C++</h3>
+      <div class="skill-bar">
+        <div class="skill-progress" data-percent="60%"></div>
+      </div>
+      <div class="skill-percent">40%</div>
+    </div>
+
+    <div class="skill-card" data-aos="zoom-in" data-aos-delay="300">
+      <i class="fa-brands fa-python skill-icon"></i>
+      <h3>Python</h3>
+      <div class="skill-bar">
+        <div class="skill-progress" data-percent="40%"></div>
+      </div>
+      <div class="skill-percent">40%</div>
+    </div>
+  </div>
+</section>
+
+
+<section id="experience" class="experience-container">
+  <h2 class="section-title">Kinh Nghiệm</h2>
+
+  <div class="timeline">
+
+    <div class="exp-item left" data-aos="fade-right">
+      <h3>Tự học lập trình <span>(2023 - nay)</span></h3>
+      <ul>
+        <li>Hoàn thành 30+ bài tập HTML/CSS/JS</li>
+        <li>Thực hành mini project mỗi tuần</li>
+      </ul>
+    </div>
+
+    <div class="exp-item right" data-aos="fade-left">
+      <h3>CLB Công nghệ <span>(2023 - nay)</span></h3>
+      <ul>
+        <li>Học teamwork, Git trong các workshop thực hành</li>
+      </ul>
+    </div>
+
+    <div class="exp-item left" data-aos="fade-right">
+      <h3>Dự án web phát nhạc <span>(2024)</span></h3>
+      <ul>
+        <li>Giao diện playlist, nút play/pause</li>
+        <li>Làm việc nhóm bằng GitHub, Trello</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+  <footer class="footer">
+  © DevCV, All Right Reserved <strong></strong> | Designed By Lam Hoang Tuan
+</footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, 
+    once: false    
+  });
+</script>
+
+</body>
+</html>
+
+  

@@ -1,0 +1,172 @@
+<!DOCTYPE html>  
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nhóm ...</title>
+
+  <!-- Link Google Fonts để dùng các font như Playfair, Inter, Caveat -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Caveat:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Link thư viện Font Awesome để dùng các icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />     
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Link file JavaScript xử lý logic tìm kiếm, hiệu ứng... -->
+  <script src="js/main.js"></script>
+</head>
+<body>
+  <!-- Hiệu ứng nền hạt động -->
+  <div class="bg-particles" id="particles"></div>
+  <!-- Phần container chính chứa toàn bộ nội dung trang -->
+  <div class="container">
+    <!-- Phần tiêu đề nhóm và ô tìm kiếm thành viên -->
+    <div class="header">
+      <h1>Nhóm 12</h1>
+      <p>Gặp gỡ những người tuyệt vời đứng sau thành công của chúng tôi</p>
+      <!-- Ô tìm kiếm thành viên theo tên hoặc kỹ năng -->
+      <div class="search-container">
+        <input type="text" class="search-box" placeholder="Tìm kiếm thành viên theo tên hoặc kỹ năng..." id="searchInput" />
+        <i class="fas fa-search search-icon"></i>
+      </div>
+    </div>
+    <!-- Lưới hiển thị danh sách các thành viên -->
+    <div class="team-grid" id="teamGrid">
+      <!-- Thẻ thành viên 1: Minh Toan -->
+      <a href="cv/NguyenMinhToan_060205001507/html/Card.html" class="member-card card-theme-1" data-name="Minh Toan" data-skills="React HTML5 CSS3 JavaScript">
+        <!-- Hình nền của thẻ -->
+        <img src="img/minhtoan.png" alt="Minh Toan" class="card-background" />
+        <!-- Lớp phủ mờ trên ảnh -->
+        <div class="card-overlay"></div>
+        <!-- Hình tròn/triangle trang trí -->
+        <div class="card-decoration decoration-circle"></div>
+        <div class="card-decoration decoration-triangle"></div>
+        <!-- Icon nổi bay lơ lửng biểu tượng kỹ năng -->
+        <div class="floating-icons">
+          <i class="fas fa-code floating-icon"></i>
+          <i class="fas fa-laptop-code floating-icon"></i>
+          <i class="fas fa-database floating-icon"></i>
+          <i class="fab fa-react floating-icon"></i>
+        </div>
+        <!-- Icon dẫn tới CV -->
+        <div class="cv-link-button">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <!-- Nội dung mô tả của thẻ -->
+        <div class="card-content">
+          <div class="member-header">
+            <!-- Vai trò của thành viên -->
+            <span class="member-role"><i class="fa-solid fa-laptop-code"></i>Frontend Developer</span>
+          </div>
+          <div class="skills-container">
+            <!-- Các kỹ năng chính có biểu tượng -->
+            <span class="skill-tag"><i class="fab fa-react" style="color: #61dafb;"></i> React</span>
+            <span class="skill-tag"><i class="fa-brands fa-html5" style="color: #E34F26;"></i> HTML5</span>
+            <span class="skill-tag"><i class="fa-brands fa-css3-alt" style="color: #1572B6;"></i> CSS3</span>
+            <span class="skill-tag"><i class="fa-brands fa-js" style="color: #F7DF1E;"></i> JavaScript</span>
+          </div>
+          <div class="member-info">
+            <!-- Câu mô tả cá nhân -->
+            <p class="member-description">Lập trình với trái tim, phát triển với tầm nhìn.</p>
+          </div>
+        </div>
+      </a>
+      <!-- Thẻ thành viên 2: Thanh Hai -->
+      <a href="cv/NguyenThanhHai_060205008672/index.html" class="member-card card-theme-2" data-name="Thanh Hai" data-skills="Java PostgreSQL iOS Android">
+        <img src="img/thanhhai.png" alt="Thanh Hai" class="card-background" />
+        <div class="card-overlay"></div>
+        <div class="card-decoration decoration-circle"></div>
+        <div class="card-decoration decoration-triangle"></div>
+        <div class="floating-icons">
+          <i class="fas fa-mobile-alt floating-icon"></i>
+          <i class="fas fa-tablet-alt floating-icon"></i>
+          <i class="fas fa-rocket floating-icon"></i>
+          <i class="fab fa-apple floating-icon"></i>
+        </div>
+        <div class="cv-link-button">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="card-content">
+          <div class="member-header">
+            <span class="member-role"><i class="fas fa-mobile-alt"></i>Mobile Developer</span>
+          </div>
+          <div class="skills-container">
+            <span class="skill-tag"><i class="fab fa-java" style="color: #ed8b00;"></i> Java</span>
+            <span class="skill-tag"><i class="fas fa-database" style="color: #336791;"></i> PostgreSQL</span>
+            <span class="skill-tag"><i class="fab fa-apple" style="color: #000000;"></i> iOS</span>
+            <span class="skill-tag"><i class="fab fa-android" style="color: #3ddc84;"></i> Android</span>
+          </div>
+          <div class="member-info">
+            <p class="member-description">Một chàng trai IT đam mê chơi nhạc!</p>
+          </div>
+        </div>
+      </a>
+      <!-- Thẻ thành viên 3: Hoang Tuan -->
+      <a href="cv/LamHoangTuan_091205016771/html/index.html" class="member-card card-theme-3" data-name="Hoang Tuan" data-skills="Vue.js Bootstrap Git Angular">
+        <img src="img/hoangtuan.png" alt="Hoang Tuan" class="card-background" />
+        <div class="card-overlay"></div>
+        <div class="card-decoration decoration-circle"></div>
+        <div class="card-decoration decoration-triangle"></div>
+        <div class="floating-icons">
+          <i class="fas fa-server floating-icon"></i>
+          <i class="fas fa-database floating-icon"></i>
+          <i class="fas fa-cogs floating-icon"></i>
+          <i class="fab fa-docker floating-icon"></i>
+        </div>
+        <div class="cv-link-button">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="card-content">
+          <div class="member-header">
+            <span class="member-role"><i class="fas fa-server"></i> Frontend Developer</span>
+          </div>
+          <div class="skills-container">
+            <span class="skill-tag"><i class="fa-brands fa-vuejs" style="color: #42b883;"></i> Vue.js</span>
+            <span class="skill-tag"><i class="fa-brands fa-bootstrap" style="color: #7952b3;"></i> Bootstrap</span>
+            <span class="skill-tag"><i class="fa-brands fa-git" style="color: #f05033;"></i> Git</span>
+            <span class="skill-tag"><i class="fa-brands fa-angular" style="color: #dd0031;"></i> Angular</span>
+          </div>
+          <div class="member-info">
+            <p class="member-description">Lập trình sáng tạo - Biến ý tưởng thành giải pháp.</p>
+          </div>
+        </div>
+      </a>
+      <!-- Thẻ thành viên 4: Tan Vinh -->
+      <a href="cv/NguyenTanVinh_052205007202/index.html" class="member-card card-theme-4" data-name="Tan Vinh" data-skills="Github Database Website Windows">
+        <img src="img/tanvinh.png" alt="Tan Vinh" class="card-background" />
+        <div class="card-overlay"></div>
+        <div class="card-decoration decoration-circle"></div>
+        <div class="card-decoration decoration-triangle"></div>
+        <div class="floating-icons">
+          <i class="fas fa-paint-brush floating-icon"></i>
+          <i class="fas fa-palette floating-icon"></i>
+          <i class="fas fa-magic floating-icon"></i>
+          <i class="fas fa-pen-nib floating-icon"></i>
+        </div>
+        <div class="cv-link-button">
+          <i class="fas fa-file-alt"></i>
+        </div>
+        <div class="card-content">
+          <div class="member-header">
+            <span class="member-role"><i class="fa-solid fa-desktop"></i> Web Developer | ASP.NET Core | C# </span>
+          </div>
+          <div class="skills-container">
+            <span class="skill-tag"><i class="fa-brands fa-github" style="color: #181717;"></i> Github</span>
+            <span class="skill-tag"><i class="fa-solid fa-database" style="color: #CC2927;"></i> Database</span>
+            <span class="skill-tag"><i class="fa-solid fa-globe" style="color: #1a73e8;"></i> Website</span>
+            <span class="skill-tag"><i class="fa-brands fa-windows" style="color: #0078D6;"></i> Windows</span>
+          </div>
+          <div class="member-info">
+            <p class="member-description">Thiết kế bằng mắt, lập trình bằng đam mê.</p>
+          </div>
+        </div>
+      </a>
+      <!-- Hiển thị khi không tìm thấy thành viên nào khớp với ô tìm kiếm -->
+      <div class="no-results" id="noResults">
+        <i class="fas fa-search"></i>
+        <p>Không tìm thấy thành viên nào phù hợp</p>
+      </div>
+    </div>
+  </div>
+  <!-- File JavaScript xử lý logic tìm kiếm và hiệu ứng -->
+  <script src="js/main.js"></script>
+</body>
+</html>

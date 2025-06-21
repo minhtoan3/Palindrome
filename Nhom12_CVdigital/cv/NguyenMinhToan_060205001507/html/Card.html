@@ -1,0 +1,69 @@
+<!DOCTYPE html> 
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Interactive Profile Card</title>
+    <!-- Link thư viện icon Font Awesome (dùng cho các biểu tượng mạng xã hội) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Link file CSS chính để định dạng thẻ profile -->
+    <link rel="stylesheet" href="../css/stylecard.css">
+</head>
+<body>
+    <!-- Nền hiệu ứng hạt bay -->
+    <div class="floating-particles" id="particles"></div>
+    <!-- Nội dung chính của trang -->
+    <main>
+        <!-- Container bao ngoài thẻ profile -->
+        <div class="card-container" id="cardContainer">
+            <!-- Thẻ profile chính với hiệu ứng 3D tương tác -->
+            <div class="profile-card" id="profileCard">
+                <!-- Vùng chứa ảnh đại diện với khung tròn và hiệu ứng -->
+                <div class="avatar-container">
+                    <div class="avatar">
+                        <img src="../images/avatar.jpg" alt="Ảnh đại diện">
+                    </div>
+                    <!-- Vòng tròn trang trí xung quanh ảnh -->
+                    <div class="avatar-ring"></div>
+                </div>
+                <!-- Thông tin cơ bản: tên, vị trí công việc -->
+                <div class="info-section">
+                    <h1 class="name">Minh Toàn</h1>
+                    <p class="title">Frontend Developer</p>
+                </div>
+                <!-- Chọn màu nền hoặc chủ đề cá nhân hoá -->
+                <div class="color-picker-container">
+                    <span class="color-picker-label">Paint Your Style</span>
+                    <!-- Bộ chọn màu cho người dùng -->
+                    <input type="color" id="colorPicker" value="#ff6b6b">
+                </div>
+                <!-- Các liên kết mạng xã hội -->
+                <div class="social-links">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/pc.toan.1/" target="_blank" rel="noopener noreferrer" class="social-link facebook" title="Facebook">
+                        <i class="fab fa-facebook-f social-icon"></i>
+                        <span>Facebook</span>
+                    </a>
+                   <!-- Instagram -->
+                    <a href="https://www.instagram.com/_nm.tn/" target="_blank" rel="noopener noreferrer" class="social-link instagram" title="Instagram">
+                        <i class="fab fa-instagram social-icon"></i>
+                        <span>Instagram</span>
+                    </a>
+                    <!-- GitHub -->
+                    <a href="https://github.com/minhtoan3" target="_blank" rel="noopener noreferrer" class="social-link github" title="GitHub">
+                        <i class="fab fa-github social-icon"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+                <!-- Nút liên kết tới CV chi tiết của cá nhân -->
+                <a href="../html/MinhToan_CVdigital.html" target="_blank" rel="noopener noreferrer" class="more-info">
+                    ✨ View More
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- File JavaScript điều khiển logic 3D, chọn màu, hiệu ứng tương tác -->
+    <script src="../js/card.js"></script>
+</body>
+</html>

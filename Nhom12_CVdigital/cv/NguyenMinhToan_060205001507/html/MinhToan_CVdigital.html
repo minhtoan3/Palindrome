@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Digital - Minh Toàn</title>
+    <!-- Liên kết để dùng icon và font chữ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../css/styleCVdigital.css">
+</head>
+<body>
+<!-- Thanh navbar-->
+    <header class="header">
+        <nav class="navbar container">
+            <a href="#home" class="logo">Minh <span>Toàn</span></a>
+            <div class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#objective">Mục tiêu</a></li>
+                    <li><a href="#education">Học vấn</a></li>
+                    <li><a href="#skills">Kỹ năng</a></li>
+                    <li><a href="#projects">Dự án</a></li>
+                    <li><a href="#awards">Chứng chỉ</a></li>
+                    <li><a href="#hobbies">Sở thích</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+                <button id="theme-toggle" title="Chuyển đổi giao diện">
+                    <i class="fas fa-sun"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+<!-- Trang home, lời giới thiệu -->
+    <main>
+        <section id="home">
+            <div class="container">
+                <div class="hero-container">
+                    <div class="hero-content">
+                        <h1>Chào bạn, tôi là <span>Minh Toàn</span></h1>
+                        <p class="subtitle">
+                            <span id="subtitle"></span><span class="typing-cursor"></span>
+                        </p>
+                    </div>
+                    <div class="hero-photo">
+                        <div class="photo-wrapper">
+                            <img src="../images/avatar.jpg" alt="Ảnh cá nhân của Minh Toàn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Mục tiêu nghề nghiệp -->
+        <section id="objective" class="hidden">
+            <div class="container">
+                <h2><i class="fas fa-bullseye"></i> Mục tiêu nghề nghiệp</h2>
+                <div class="card">
+                    <p>Là sinh viên năm hai ngành công nghệ thông tin tại Đại học Giao Thông Vận Tải (UTH), em không chỉ được trang bị kiến thức nền tảng về tư duy lập trình và thuật toán mà còn rèn luyện được tinh thần tự học và kỹ năng giải quyết vấn đề qua các đồ án môn học.</p>
+                    <p>Em mong muốn tìm kiếm một vị trí thực tập để có thể biến những kiến thức lý thuyết trên giảng đường thành kinh nghiệm thực tiễn, qua đó hiểu sâu hơn về quy trình phát triển một sản phẩm chuyên nghiệp và nhanh chóng thích ứng với các công nghệ mới.</p>
+                    <p>Với thái độ cầu thị và tinh thần trách nhiệm, em cam kết sẽ nỗ lực hết mình để hoàn thành tốt các nhiệm vụ được giao, đóng góp vào thành công chung của đội nhóm.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Trình độ học vấn -->
+        <section id="education" class="hidden">
+            <div class="container">
+                <h2><i class="fas fa-graduation-cap"></i> Học vấn</h2>
+                <div class="card">
+                    <h3>Đại học Giao Thông Vận Tải (UTH) - TP. Hồ Chí Minh</h3>
+                    <p><strong>Chuyên ngành:</strong> Công nghệ thông tin</p>
+                    <p><strong>Niên khóa:</strong> 2023 - 2027 (dự kiến)</p>
+                    <p><strong>GPA hiện tại:</strong> 3.61 / 4.0</p>
+                </div>
+            </div>
+        </section>
+        <!-- Kỹ năng -->
+        <section id="skills" class="hidden">
+            <div class="container">
+                <h2><i class="fas fa-cogs"></i> Kỹ năng</h2>
+                <div class="card">
+                    <div class="skills-category"> <!-- Ngôn ngữ và nền tảng đã thông dụng -->
+                        <h3><i class="fas fa-code"></i> Ngôn ngữ & Nền tảng</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">HTML5</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="45%"></div>
+                                </div>
+                                <span class="skill-level">45%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">CSS3</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="45%"></div>
+                                </div>
+                                <span class="skill-level">45%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">JavaScript (ES6)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="45%"></div>
+                                </div>
+                                <span class="skill-level">45%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">C++ (Cơ bản)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="50%"></div>
+                                </div>
+                                <span class="skill-level">50%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">SQL (Cơ bản)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="55%"></div>
+                                </div>
+                                <span class="skill-level">55%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skills-category"> <!-- Khả nang sử dụng công cụ và công nghệ -->
+                        <h3><i class="fas fa-tools"></i> Công cụ & Công nghệ</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">Git & GitHub</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="58%"></div>
+                                </div>
+                                <span class="skill-level">58%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">VS Code</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="65%"></div>
+                                </div>
+                                <span class="skill-level">65%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">ChatGPT & AI Tools</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="70%"></div>
+                                </div>
+                                <span class="skill-level">70%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Figma (Cơ bản)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="45%"></div>
+                                </div>
+                                <span class="skill-level">45%</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="skills-category"> <!-- Trình độ ngoại ngữ -->
+                        <h3><i class="fas fa-language"></i> Ngoại ngữ</h3>
+                        <ul class="skills-list">
+                            <li>
+                                <span class="skill-name">Tiếng Việt (Bản ngữ)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="100%"></div>
+                                </div>
+                                <span class="skill-level">100%</span>
+                            </li>
+                            <li>
+                                <span class="skill-name">Tiếng Anh (Giao tiếp cơ bản)</span>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" data-width="50%"></div>
+                                </div>
+                                <span class="skill-level">50%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Các dự án nỗi bật -->
+        <section id="projects" class="hidden">
+            <div class="container">
+                <h2><i class="fas fa-project-diagram"></i> Dự án nổi bật</h2>
+                <div class="grid-container">
+                    <div class="card project-card">
+                        <img src="../images/MusicWeb_project.png" alt="Dự án trang web phát nhạc" class="project-image">
+                        <div class="project-content">
+                            <h3>Trang web phát nhạc</h3>
+                            <p>Dự án nhóm nhằm xây dựng một trang web nghe nhạc trực tuyến với các chức năng cơ bản như tìm kiếm, tạo playlist và phát nhạc. </p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <a href="#" target="_blank" class="project-link">Xem dự án <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="card project-card">
+                        <img src="../images/PalindromeChecker_project.png" alt="Dự án khác" class="project-image">
+                        <div class="project-content">
+                            <h3>Trang web kiểm tra Palindrome</h3>
+                            <p>Một ứng dụng web đơn giản, trực quan, giúp người dùng nhanh chóng kiểm tra xem một từ, câu hoặc chuỗi ký tự có phải là Palindrome (chuỗi đối xứng) hay không. Dự án này tập trung vào việc xử lý logic thuật toán và mang lại trải nghiệm người dùng mượt mà.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Spring Boot</span>
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <a href="https://github.com/minhtoan3/Palindrome" target="_blank" class="project-link">Xem dự án <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Chứng chỉ và giải thưởng -->
+        <section id="awards" class="hidden">
+            <div class="container">
+                <h2><i class="fas fa-trophy"></i> Chứng chỉ & Giải thưởng</h2>
+                <div class="card">
+                    <div class="certificate-item">
+                        <h3>Chứng chỉ tin học cơ bản</h3>
+                        <p><strong>Đơn vị cấp:</strong> Đại học Giao Thông Vận Tải (UTH)</p>
+                    </div>
+                    <hr>
+                    <div class="awards-placeholder">
+                        <i class="fas fa-award"></i>
+                        <p>Các giải thưởng và chứng chỉ khác đang được cập nhật...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Sở thích -->
+        <section id="hobbies" class="hidden">
+            <div class="container">
+                <h2><i class="fas fa-heart"></i> Sở thích</h2>
+                <div class="hobbies-container">
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrapper">
+                            <i class="fas fa-film hobby-icon"></i>
+                        </div>
+                        <h3>Xem phim</h3>
+                        <p>Khám phá những câu chuyện và thế giới mới qua từng khung hình.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrapper">
+                            <i class="fas fa-gamepad hobby-icon"></i>
+                        </div>
+                        <h3>Chơi game</h3>
+                        <p>Rèn luyện tư duy chiến thuật và khả năng giải quyết vấn đề trong thế giới ảo.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrapper">
+                            <i class="fas fa-plane-departure hobby-icon"></i>
+                        </div>
+                        <h3>Du lịch</h3>
+                        <p>Mở rộng tầm mắt, trải nghiệm văn hóa và tìm kiếm nguồn cảm hứng sáng tạo.</p>
+                    </div>
+                    <div class="hobby-card">
+                        <div class="hobby-icon-wrapper">
+                            <i class="fas fa-basketball hobby-icon"></i>
+                        </div>
+                        <h3>Thể thao</h3>
+                        <p>Nâng cao sức khỏe, giải tỏa căng thẳng và xây dựng tinh thần đồng đội.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Thông tin cá nhân -->
+        <section id="contact" class="hidden">
+             <div class="container">
+                <h2><i class="fas fa-id-card"></i> Thông tin cá nhân</h2>
+                <div class="card">
+                    <div class="contact-container-new">
+                        
+                        <div class="contact-info-list-wrapper">
+                            <ul class="info-list">
+                                <li><i class="fas fa-user"></i><strong>Họ và tên:</strong> <span>Nguyễn Minh Toàn</span></li>
+                                <li><i class="fas fa-calendar-alt"></i><strong>Ngày sinh:</strong> <span>01/03/2005</span></li>
+                                <li><i class="fas fa-venus-mars"></i><strong>Giới tính:</strong> <span>Nam</span></li>
+                                <li><i class="fas fa-id-card"></i><strong>MSSV:</strong> <span>060205001507</span></li>
+                                <li><i class="fas fa-phone"></i><strong>Điện thoại:</strong> <span>0337 466 768</span></li>
+                                <li><i class="fas fa-envelope"></i><strong>Email:</strong> <span>Toann0299@gmail.com</span></li>
+                                <li><i class="fas fa-map-marker-alt"></i><strong>Địa chỉ:</strong> <span>Bình Tân, Hồ Chí Minh</span></li>
+                            </ul>
+                        </div>
+
+                        <div class="contact-photo-center">
+                            <img src="../images/avatar2.jpg" alt="Ảnh chân dung Minh Toàn">
+                        </div>
+
+                        <div class="contact-info-description">
+                            <h4 class="contact-description-heading">Lời ngỏ</h4>
+                            <p class="contact-description-text">
+                                Tôi luôn sẵn lòng lắng nghe và trao đổi về các cơ hội hợp tác, những dự án thú vị hoặc bất kỳ câu hỏi nào bạn có. Đừng ngần ngại liên hệ!
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Phần footer chứa các thông tin liên hệ, điều hướng, thông tin cá nhân cơ bản -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-column footer-about">
+                    <a href="#home" class="logo">Minh <span>Toàn</span></a>
+                    <p class="footer-slogan">Kiến tạo những trải nghiệm số ấn tượng, từ ý tưởng đến sản phẩm hoàn thiện.</p>
+                    <div class="footer-social">
+                        <ul class="social-links">
+                           <li><a href="https://www.facebook.com/pc.toan.1/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                           <li><a href="https://github.com/minhtoan3" target="_blank" title="GitHub"><i class="fab fa-github"></i></a></li>
+                           <li><a href="https://www.instagram.com/_nm.tn/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                           <li><a href="mailto:Toann0299@gmail.com" title="Gmail"><i class="fas fa-envelope"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Điều hướng</h4>
+                    <ul class="footer-links">
+                        <li><a href="#objective">Mục tiêu</a></li>
+                        <li><a href="#education">Học vấn</a></li>
+                        <li><a href="#skills">Kỹ năng</a></li>
+                        <li><a href="#projects">Dự án</a></li>
+                        <li><a href="#awards">Chứng chỉ</a></li>
+                        <li><a href="#hobbies">Sở thích</a></li>
+                        <li><a href="#contact">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 class="footer-heading">Liên hệ</h4>
+                    <div class="footer-contact-info">
+                        <p><i class="fas fa-envelope"></i> <span>Toann0299@gmail.com</span></p>
+                        <p><i class="fas fa-phone"></i> <span>0337 466 768</span></p>
+                        <p><i class="fas fa-map-marker-alt"></i> <span>Bình Tân, Hồ Chí Minh</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; Bản quyền 2025 bởi Nguyễn Minh Toàn.</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#home" id="scrollTopBtn" title="Lên đầu trang"><i class="fas fa-arrow-up"></i></a> <!-- Nút bấm dẫn đến trang Home -->
+    <script src="../js/MinhToan_CVdigital.js"></script>
+</body>
+</html>

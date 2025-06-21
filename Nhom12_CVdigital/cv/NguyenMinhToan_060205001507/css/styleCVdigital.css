@@ -1,0 +1,389 @@
+/* --- BIẾN MÀU SẮC TOÀN CỤC (CSS VARIABLES) --- */
+/* Sử dụng biến giúp dễ dàng thay đổi theme (chủ đề) của trang web */
+:root {
+    --primary-color: #0d94e7;
+    --background-color: #121828;
+    --card-color: #1a2238;
+    --text-color: #e0e0e0;
+    --subtle-text-color: #a0a0a0;
+    --border-color: rgba(13, 148, 231, 0.2);
+    --shadow-color: rgba(13, 148, 231, 0.1);
+    --heading-color: #ffffff;
+}
+
+/* --- CHẾ ĐỘ SÁNG (LIGHT MODE) --- */
+/* Ghi đè các biến màu khi body có class 'light-mode' */
+body.light-mode {
+    --background-color: #f4f7f9;
+    --card-color: #ffffff;
+    --text-color: #333333;
+    --subtle-text-color: #666666;
+    --border-color: rgba(13, 148, 231, 0.15);
+    --shadow-color: rgba(13, 148, 231, 0.1);
+    --heading-color: #111111;
+}
+
+/* --- THIẾT LẬP CƠ BẢN & RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Hiệu ứng cuộn mượt khi nhấn vào link neo */
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* Thêm một hình nền SVG dạng lưới nhỏ để trang trí */
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+    color: var(--heading-color);
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+/* Đường gạch chân trang trí cho tiêu đề h2 */
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+section {
+    padding: 80px 0;
+    position: relative;
+}
+
+/* --- HEADER & THANH ĐIỀU HƯỚNG --- */
+.header {
+    position: fixed; /* Giữ header cố định khi cuộn trang */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(18, 24, 40, 0.85); /* Nền mờ để thấy nội dung bên dưới */
+    backdrop-filter: blur(10px); /* Hiệu ứng làm mờ nền */
+    z-index: 1000;
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+body.light-mode .header {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.navbar { display: flex; justify-content: space-between; align-items: center; height: 70px; }
+.logo { font-size: 1.5rem; font-weight: 700; color: var(--heading-color); text-decoration: none; }
+.logo span { color: var(--primary-color); }
+.nav-menu { display: flex; align-items: center; gap: 25px; }
+.nav-links { display: flex; list-style: none; gap: 30px; }
+.nav-links a { color: var(--text-color); text-decoration: none; font-weight: 500; transition: color 0.3s ease; position: relative; padding-bottom: 5px; }
+.nav-links a:hover, .nav-links a.active { color: var(--primary-color); }
+
+/* Hiệu ứng gạch chân khi hover vào link điều hướng */
+.nav-links a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background-color: var(--primary-color); transition: width 0.3s ease; }
+.nav-links a:hover::after { width: 100%; }
+#theme-toggle { background: none; border: none; color: var(--text-color); font-size: 1.2rem; cursor: pointer; transition: color 0.3s ease, transform 0.3s ease; }
+#theme-toggle:hover { color: var(--primary-color); transform: scale(1.1); }
+
+/* --- PHẦN GIỚI THIỆU --- */
+#home { min-height: 100vh; display: flex; align-items: center; }
+.hero-container { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+.hero-content { flex: 1; }
+.hero-content h1 { font-size: 3.5rem; margin-bottom: 10px; }
+.hero-content h1 span { color: var(--primary-color); }
+.hero-content .subtitle { font-size: 1.5rem; color: var(--subtle-text-color); margin-bottom: 30px; min-height: 2.5em; display: flex; align-items: center; }
+
+/* Con trỏ nhấp nháy cho hiệu ứng gõ chữ */
+.typing-cursor { display: inline-block; width: 3px; height: 1.5rem; background-color: var(--primary-color); animation: blink 0.7s infinite; margin-left: 3px; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.hero-photo { flex-shrink: 0; width: 280px; height: 280px; position: relative; }
+.hero-photo .photo-wrapper { width: 100%; height: 100%; border-radius: 50%; border: 5px solid var(--primary-color); padding: 5px; animation: zoomIn 1s ease-in-out; }
+@keyframes zoomIn { from { transform: scale(0.5); opacity: 0;} to { transform: scale(1); opacity: 1;} }
+.hero-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+/* --- THẺ (CARD) CHUNG --- */
+.card { background: var(--card-color); padding: 40px; border-radius: 10px; border: 1px solid var(--border-color); transition: all 0.3s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 10px 30px var(--shadow-color); }
+
+/* --- CÁC PHẦN CỤ THỂ --- */
+#objective .card p { margin-bottom: 1em; }
+#objective .card p:last-child { margin-bottom: 0; }
+
+.grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+#education .card h3 { color: var(--primary-color); margin-bottom: 10px; }
+
+/* --- PHẦN KỸ NĂNG --- */
+.skills-category { margin-bottom: 30px; }
+.skills-category:last-child { margin-bottom: 0; }
+.skills-category h3 { color: var(--primary-color); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid var(--border-color);}
+.skills-list { list-style: none; padding: 0; margin: 0; }
+.skills-list li { display: flex; align-items: center; margin-bottom: 15px; }
+.skills-list li:last-child { margin-bottom: 0; }
+.skill-name { width: 180px; font-weight: 500; }
+.progress-bar { flex-grow: 1; background-color: var(--border-color); border-radius: 10px; height: 8px; overflow: hidden; }
+/* Thanh tiến trình sẽ được kích hoạt animation bằng JavaScript */
+.progress-fill { background-image: linear-gradient(45deg, var(--primary-color), #51b5f0); height: 100%; border-radius: 10px; width: 0; transition: width 1.5s ease-in-out; }
+.skill-level { font-size: 0.9rem; color: var(--subtle-text-color); width: 45px; text-align: right; margin-left: 15px; }
+
+/* --- PHẦN DỰ ÁN --- */
+.project-card { display: flex; flex-direction: column; height: 100%; }
+.project-image { width: 100%; height: 300px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; }
+.project-content { flex-grow: 1; display: flex; flex-direction: column; }
+.project-content h3 { color: var(--primary-color); }
+.project-content p { flex-grow: 1; margin: 10px 0; }
+.project-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+.project-tag { background: #2a3652; color: #a0a0a0; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; }
+body.light-mode .project-tag { background-color: #eef2f5; }
+.project-link { color: var(--primary-color); text-decoration: none; font-weight: 600; align-self: flex-start; }
+.project-link:hover { text-decoration: underline; }
+
+/* --- PHẦN LIÊN HỆ --- */
+.contact-container-new {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 40px;
+    align-items: center;
+}
+.contact-photo-center {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 5px solid var(--primary-color);
+    padding: 5px;
+    box-shadow: 0 8px 25px var(--shadow-color);
+    animation: zoomIn 1s ease-in-out;
+}
+.contact-photo-center img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.contact-info-description {
+    border-left: 2px solid var(--border-color);
+    padding-left: 40px;
+}
+.contact-description-heading {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+.contact-description-text {
+    color: var(--subtle-text-color);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+.info-list { list-style: none; padding: 0; }
+.info-list li { display: flex; align-items: center; margin-bottom: 18px; font-size: 1rem; }
+.info-list li:last-child { margin-bottom: 0; }
+.info-list i { color: var(--primary-color); font-size: 1.1rem; width: 30px; text-align: center; margin-right: 15px; }
+.info-list strong { font-weight: 600; width: 120px; color: var(--heading-color); }
+
+/* --- LIÊN KẾT MẠNG XÃ HỘI (chung) --- */
+.social-links { list-style: none; padding:0; display: flex; gap: 15px; }
+.social-links a { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; border: 2px solid var(--border-color); color: var(--subtle-text-color); font-size: 1.2rem; text-decoration: none; transition: all 0.3s ease; }
+.social-links a:hover { color: #fff; transform: translateY(-3px); }
+/* Hiệu ứng hover đặc trưng cho từng mạng xã hội */
+.social-links a[title="Facebook"]:hover { background-color: #1877F2; border-color: #1877F2; }
+.social-links a[title="Gmail"]:hover { background-color: #2cc640; border-color: #2cc640; }
+.social-links a[title="GitHub"]:hover { background-color: #333; border-color: #333; }
+.social-links a[title="Instagram"]:hover { background-image: linear-gradient(45deg, #833ab4, #fd1d1d, #fcb045); border-color: #fd1d1d; }
+
+/* --- PHẦN SỞ THÍCH --- */
+.hobbies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+.hobby-card {
+    background: var(--card-color);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+.hobby-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px var(--shadow-color);
+    border-color: var(--primary-color);
+}
+.hobby-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px auto;
+    border-radius: 50%;
+    background-color: rgba(13, 148, 231, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hobby-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+}
+.hobby-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--heading-color);
+}
+.hobby-card p {
+    font-size: 0.9rem;
+    color: var(--subtle-text-color);
+    line-height: 1.6;
+}
+
+/* --- CSS CHO MỤC CHỨNG CHỈ & GIẢI THƯỞNG --- */
+.certificate-item h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+.certificate-item p {
+    font-size: 0.95rem;
+    color: var(--subtle-text-color);
+}
+#awards hr {
+    border: none;
+    border-top: 1px dashed var(--border-color);
+    margin: 30px 0;
+}
+.awards-placeholder {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+}
+.awards-placeholder i {
+    font-size: 2.5rem;
+    color: var(--subtle-text-color);
+    margin-bottom: 15px;
+}
+
+/* --- HIỆU ỨNG XUẤT HIỆN KHI CUỘN --- */
+/* Ban đầu các phần tử này sẽ bị ẩn đi */
+.hidden { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+/* Khi được thêm class 'visible' (bằng JS), các phần tử sẽ hiện ra mượt mà */
+.visible { opacity: 1; transform: translateY(0); }
+
+/* --- NÚT LÊN ĐẦU TRANG --- */
+#scrollTopBtn { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background-color: var(--primary-color); color: #fff; border: none; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(20px); transition: all 0.3s ease; z-index: 999; }
+#scrollTopBtn.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+
+/* --- CHÂN TRANG --- */
+.footer {
+    background-color: var(--background-color);
+    padding: 60px 0 20px 0;
+    border-top: 1px solid var(--border-color);
+    margin-top: 60px;
+}
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-column .logo {
+    font-size: 1.8rem;
+    display: block;
+    margin-bottom: 15px;
+}
+.footer-slogan {
+    color: var(--subtle-text-color);
+    line-height: 1.6;
+}
+.footer-heading {
+    font-size: 1.2rem;
+    color: var(--heading-color);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}
+.footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--primary-color);
+}
+.footer-links { list-style: none; padding: 0; margin: 0; }
+.footer-links li { margin-bottom: 12px; }
+.footer-links a { color: var(--subtle-text-color); text-decoration: none; transition: all 0.3s ease; }
+.footer-links a:hover { color: var(--primary-color); padding-left: 5px; }
+.footer-contact-info p { margin-bottom: 15px; color: var(--subtle-text-color); display: flex; align-items: center; gap: 10px; }
+.footer-social { margin-top: 20px; }
+.footer-bottom { padding-top: 20px; border-top: 1px solid var(--border-color); text-align: center; color: var(--subtle-text-color); font-size: 0.9rem; }
+
+/* --- CSS ĐÁP ỨNG (RESPONSIVE) --- */
+/* Dành cho máy tính bảng và màn hình nhỏ hơn 992px */
+@media (max-width: 992px) {
+    .hero-container { flex-direction: column-reverse; text-align: center; }
+    .hero-photo { width: 220px; height: 220px; margin-bottom: 30px; }
+    .hero-content h1 { font-size: 2.8rem; }
+    .hero-content .subtitle { justify-content: center; } 
+}
+
+/* Dành cho điện thoại di động và màn hình nhỏ hơn 768px */
+@media (max-width: 768px) {
+    .navbar { flex-direction: column; height: auto; padding: 15px 0; }
+    .nav-menu { margin-top: 15px; }
+    #home { padding-top: 140px; min-height: auto; }
+    h2 { font-size: 2rem; }
+    .info-list strong { width: 100px; }
+    
+    /* === CẬP NHẬT RESPONSIVE CHO PHẦN CONTACT === */
+    .contact-container-new {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .contact-photo-center {
+        order: -1; /* Đưa ảnh lên đầu tiên trên di động */
+        margin: 0 auto 30px auto;
+    }
+    .footer-main {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .footer-heading::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .contact-info-description {
+        border-left: none;
+        padding-left: 0;
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: 2px solid var(--border-color);
+    }
+    .footer-contact-info p {
+        justify-content: center;
+    }
+}
